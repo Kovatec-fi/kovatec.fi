@@ -1,0 +1,152 @@
+/* Kovatec one-page site. Values follow design_handoff_kovatec_site (Oct 2026). */
+
+@font-face{font-family:"Chakra Petch";font-weight:500;src:url(assets/fonts/ChakraPetch-500.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Chakra Petch";font-weight:600;src:url(assets/fonts/ChakraPetch-600.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Chakra Petch";font-weight:700;src:url(assets/fonts/ChakraPetch-700.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Space Grotesk";font-weight:400;src:url(assets/fonts/SpaceGrotesk-400.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Space Grotesk";font-weight:500;src:url(assets/fonts/SpaceGrotesk-500.woff2) format("woff2");font-display:swap}
+
+html{scroll-behavior:smooth}
+body{margin:0;background:#EFEDE9;color:#1B1B1F;font-family:"Space Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#1B1B1F;text-decoration:none}
+a:hover{color:#F5A800}
+*{box-sizing:border-box}
+h1,h2,h3,p,address{margin:0}
+ul,ol{margin:0;padding:0;list-style:none}
+abbr[title]{text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.amber{color:#F5A800}
+
+/* Shared type */
+.eyebrow{font:600 13px/1 'Chakra Petch',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.eyebrow--amber{color:#F5A800}
+.eyebrow--muted{color:#6B6862}
+.eyebrow--muted2{color:#9B968D}
+.h2{margin:0;font:600 clamp(32px,4vw,52px)/1.05 'Chakra Petch',sans-serif;text-wrap:balance}
+
+/* Sections */
+.section{padding:clamp(64px,8vw,120px) clamp(20px,5vw,72px);scroll-margin-top:0}
+.section--dark{background:#17161A;color:#FFFFFF}
+.container{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)}
+.section-head{display:flex;flex-direction:column;gap:16px}
+
+/* 1. Hero */
+.hero{background:#17161A;color:#FFFFFF;padding:clamp(24px,4vw,48px) clamp(20px,5vw,72px) clamp(48px,7vw,96px);display:flex;flex-direction:column;gap:clamp(48px,8vw,112px);overflow:hidden}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.nav-logo{height:36px;width:auto;display:block}
+.nav-links{display:flex;gap:28px;flex-wrap:wrap;font:500 13px/1 'Chakra Petch',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.nav-links a{color:#9B968D}
+.nav-links a:hover{color:#F5A800}
+.nav-links a.nav-cta{color:#F5A800}
+.nav-links a.nav-cta:hover{color:#FFFFFF}
+.hero-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc(50% - 28px),(720px - 100%)*1000,100%),1fr));gap:56px;align-items:end;max-width:1280px;width:100%;margin:0 auto}
+.hero-text{display:flex;flex-direction:column;gap:28px}
+.hero-title{margin:0;font:600 clamp(40px,6vw,80px)/1.02 'Chakra Petch',sans-serif;letter-spacing:-.01em;text-wrap:balance}
+.hero-lead{margin:0;max-width:520px;font:400 clamp(17px,1.6vw,20px)/1.5 'Space Grotesk',sans-serif;color:#DDD9D2;text-wrap:pretty}
+.glyph{display:grid;grid-template-columns:repeat(4,clamp(22px,5vw,76px));grid-template-rows:repeat(5,clamp(22px,5vw,76px));gap:clamp(6px,1.2vw,18px);justify-self:end}
+.glyph div{background:#FFFFFF}
+.glyph div:nth-child(1){grid-area:1/1}
+.glyph div:nth-child(2){grid-area:2/1}
+.glyph div:nth-child(3){grid-area:3/1}
+.glyph div:nth-child(4){grid-area:4/1}
+.glyph div:nth-child(5){grid-area:5/1}
+.glyph div:nth-child(6){grid-area:3/2}
+.glyph div:nth-child(7){grid-area:2/3}
+.glyph div:nth-child(8){grid-area:4/3}
+.glyph div:nth-child(9){grid-area:1/4;background:#F5A800}
+.glyph div:nth-child(10){grid-area:5/4;background:#F5A800}
+
+/* 2. Key figures */
+.figures{padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px);background:#FFFFFF;border-bottom:1px solid #DDD9D2}
+.figures-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc(25% - 1px),(800px - 100%)*1000,calc(50% - 1px)),1fr));gap:1px;background:#DDD9D2}
+.figure{display:flex;flex-direction:column;gap:14px;padding:12px 28px;background:#FFFFFF}
+.figure-mark{width:14px;height:14px;background:#F5A800}
+.figure-value{font:600 clamp(48px,5vw,68px)/1 'Chakra Petch',sans-serif}
+.figure-label{font:500 14px/1.4 'Space Grotesk',sans-serif;color:#6B6862}
+
+/* 3. What we do */
+.lifecycle{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}
+.lifecycle li{background:#1B1B1F;color:#FFFFFF;padding:18px 20px;font:600 clamp(14px,1.5vw,18px)/1 'Chakra Petch',sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.lifecycle li.is-accent{background:#F5A800;color:#1B1B1F}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc(33.33% - 14px),(760px - 100%)*1000,100%),1fr));gap:20px}
+.card{background:#FFFFFF;padding:32px;display:flex;flex-direction:column;gap:18px;border-top:4px solid #1B1B1F}
+.card--accent{border-top-color:#F5A800}
+.card-num{font:700 44px/1 'Chakra Petch',sans-serif;color:#F5A800}
+.card-title{margin:0;font:600 24px/1.15 'Chakra Petch',sans-serif}
+.card-text{margin:0;font:400 16px/1.5 'Space Grotesk',sans-serif;color:#6B6862;text-wrap:pretty}
+.scope{background:#FFFFFF;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:28px}
+.scope-head{display:flex;flex-direction:column;gap:10px}
+.scope-title{margin:0;font:600 clamp(22px,2.4vw,30px)/1.15 'Chakra Petch',sans-serif;text-wrap:balance}
+.scope-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc(33.33% - 20px),(760px - 100%)*1000,100%),1fr));gap:14px 28px;align-items:center}
+.scope-who{display:flex;flex-direction:column;gap:4px}
+.scope-name{font:600 16px/1.2 'Chakra Petch',sans-serif;color:#6B6862}
+.scope-name--strong{color:#1B1B1F}
+.scope-sub{font:400 13px/1.3 'Space Grotesk',sans-serif;color:#9B968D}
+.strip{display:flex;gap:4px}
+.strip li{flex:1 1 0;min-width:0;height:44px;display:flex;align-items:center;justify-content:center;background:#EFEDE9;color:#9B968D;font:600 clamp(10px,1.1vw,13px)/1 'Chakra Petch',sans-serif;letter-spacing:0;overflow:hidden;white-space:nowrap;padding:0 2px}
+.strip li.on{background:#F5A800;color:#1B1B1F}
+.scope-measure{font:500 15px/1.35 'Space Grotesk',sans-serif;color:#6B6862}
+.scope-measure--strong{font:600 15px/1.35 'Chakra Petch',sans-serif;color:#1B1B1F}
+
+/* 4. Rail expertise */
+.exp-card{background:#2A2A30;padding:32px;display:flex;flex-direction:column;gap:72px;justify-content:flex-start}
+.exp-card .eyebrow{color:#9B968D}
+.exp-card--accent{background:#F5A800;color:#1B1B1F}
+.exp-card--accent .eyebrow{color:inherit}
+.exp-body{display:flex;flex-direction:column;gap:10px}
+.exp-title{margin:0;font:600 40px/1 'Chakra Petch',sans-serif}
+.exp-sub{margin:0;font:500 15px/1.4 'Space Grotesk',sans-serif;color:#DDD9D2}
+.exp-card--accent .exp-sub{color:inherit}
+.systems{display:flex;flex-direction:column;gap:20px;padding-top:8px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(calc(25% - 6px),(760px - 100%)*1000,calc(50% - 4px)),1fr));gap:8px}
+.tile{border:1px solid #3B3B41;padding:24px;display:flex;flex-direction:column;gap:22px;min-width:0}
+.tile svg{display:block;overflow:visible}
+.tile-name{font:600 18px/1.1 'Chakra Petch',sans-serif;letter-spacing:.03em}
+.tile--accent{border-color:#F5A800}
+.tile--accent .tile-name{color:#F5A800}
+
+/* 5. References */
+.feature{background:#FFFFFF;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:40px;align-items:end}
+.feature-text{display:flex;flex-direction:column;gap:14px}
+.feature-eyebrow{font:600 13px/1.3 'Chakra Petch',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B6862}
+.feature-title{margin:0;font:600 clamp(24px,2.6vw,32px)/1.15 'Chakra Petch',sans-serif;text-wrap:balance}
+.feature-body{margin:0;font:400 16px/1.5 'Space Grotesk',sans-serif;color:#6B6862}
+.chart-wrap{display:flex;flex-direction:column;gap:12px}
+.chart{display:grid;grid-template-columns:72px minmax(0,1fr) 56px;gap:14px;align-items:center}
+.chart-label{font:500 13px/1.2 'Space Grotesk',sans-serif;color:#6B6862}
+.bar{height:36px;background:#EFEDE9;position:relative}
+.bar--empty::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:#9B968D}
+.bar--full{background:#F5A800}
+.chart-value{font:600 20px/1 'Chakra Petch',sans-serif;text-align:right}
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(clamp(clamp(calc(25% - 15px),(1000px - 100%)*1000,calc(50% - 10px)),(520px - 100%)*1000,100%),1fr));gap:20px}
+.ref{background:#FFFFFF;padding:28px;display:flex;flex-direction:column;gap:16px}
+.ref-num{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;min-width:0}
+.ref-value{font:600 clamp(44px,4.6vw,64px)/1 'Chakra Petch',sans-serif;white-space:nowrap}
+.ref-unit{font:600 20px/1 'Chakra Petch',sans-serif;color:#F5A800}
+.rule{height:1px;background:#DDD9D2}
+.ref-eyebrow{font:600 12px/1.3 'Chakra Petch',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#6B6862}
+.ref-text{margin:0;font:500 16px/1.45 'Space Grotesk',sans-serif}
+.countries-block{display:flex;flex-direction:column;gap:16px}
+.countries{display:flex;flex-wrap:wrap;gap:8px}
+.countries li{background:#1B1B1F;color:#FFFFFF;width:64px;height:64px;display:flex;align-items:center;justify-content:center;font:600 18px/1 'Chakra Petch',sans-serif}
+.countries li.on{background:#F5A800;color:#1B1B1F}
+
+/* 6. Contact footer */
+.contact{background:#17161A;color:#FFFFFF;padding:clamp(64px,8vw,112px) clamp(20px,5vw,72px) 40px;scroll-margin-top:0}
+.contact-inner{max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(56px,7vw,96px)}
+.contact-top{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:40px;align-items:end}
+.contact-title{margin:0;font:600 clamp(36px,5vw,64px)/1.02 'Chakra Petch',sans-serif;text-wrap:balance}
+.contact-links{display:flex;flex-direction:column;gap:14px;font:500 clamp(18px,1.8vw,22px)/1.3 'Space Grotesk',sans-serif;font-style:normal}
+.contact-links a{color:#FFFFFF;display:flex;align-items:center;gap:14px}
+.contact-links a:hover{color:#F5A800}
+.dot{width:10px;height:10px;background:#F5A800;flex:none}
+.contact-note{color:#9B968D;font-size:.8em}
+.contact-bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-top:28px;border-top:1px solid #3B3B41}
+.footer-logo{height:28px;width:auto;display:block}
+.legal{margin:0;font:400 13px/1.6 'Space Grotesk',sans-serif;color:#9B968D;text-align:right}
+
+/* 404 page */
+.notfound{min-height:100vh;display:flex;flex-direction:column;justify-content:space-between}
+.notfound .hero{flex:1}
+.notfound-link{font:600 15px/1 'Chakra Petch',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#F5A800}
+.notfound-link:hover{color:#FFFFFF}

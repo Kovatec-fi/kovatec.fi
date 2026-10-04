@@ -1,0 +1,4 @@
+Contact: mailto:info@kovatec.fi
+Expires: 2027-10-04T00:00:00.000Z
+Preferred-Languages: en, fi
+Canonical: https://kovatec.fi/.well-known/security.txt
